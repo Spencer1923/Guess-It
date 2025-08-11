@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCC0C0"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/tabBack_M"
+        android:layout_width="wrap_content"
+        android:layout_height="63dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/tabMain_M"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="269dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/tabLB_Main"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tabBack_M"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Main"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tabMain_M"
+        app:layout_constraintEnd_toEndOf="@+id/tabMain_M"
+        app:layout_constraintStart_toStartOf="@+id/tabMain_M"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/tabGame_M"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:layout_marginEnd="135dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@id/tabLB_Main"
+        app:layout_constraintStart_toEndOf="@+id/tabMain_M"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tabGame_M"
+        app:layout_constraintEnd_toEndOf="@+id/tabGame_M"
+        app:layout_constraintStart_toEndOf="@id/tabMain_M"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/tabLB_Main"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tabGame_M"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leaderboard"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tabLB_Main"
+        app:layout_constraintEnd_toEndOf="@+id/tabBack_M"
+        app:layout_constraintStart_toEndOf="@+id/tabGame_M"
+        app:layout_constraintTop_toTopOf="@+id/tabLB_Main" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="282dp"
+        android:layout_height="164dp"
+        android:contentDescription="TODO"
+        android:cropToPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tabBack_M"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@mipmap/ic_launcher_foreground" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonStart"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="90dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/ic_media_play"
+        android:color="@color/colorPrimary"
+        android:onClick="gameInitialize"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.174"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonLB"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="90dp"
+        android:layout_height="92dp"
+        android:background="@android:drawable/btn_star_big_on"
+        android:color="@color/colorPrimary"
+        android:onClick="leaderboard"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintVertical_bias="0.438" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Leaderboard"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toEndOf="@+id/buttonLB"
+        app:layout_constraintTop_toTopOf="@+id/guideline15"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="156dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Begin"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.288"
+        app:layout_constraintStart_toEndOf="@+id/buttonStart"
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="227dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="504dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="237dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="549dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="182dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="530dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="365dp"
+        android:layout_marginEnd="411dp"
+        android:layout_marginBottom="366dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="365dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
